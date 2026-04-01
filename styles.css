@@ -806,13 +806,50 @@ body {
 .footer {
     background-color: var(--secondary-blue);
     color: white;
-    padding: 2rem 20px;
+    padding: 3rem 20px;
     text-align: center;
 }
 
-.footer p {
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-section p {
     margin: 0.5rem 0;
     opacity: 0.9;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.footer-section strong {
+    color: white;
+    font-weight: 600;
+}
+
+.footer-company {
+    text-align: left;
+    border-left: 2px solid rgba(255, 255, 255, 0.3);
+    padding-left: 2rem;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .footer-company {
+        border-left: none;
+        border-top: 2px solid rgba(255, 255, 255, 0.3);
+        padding-left: 0;
+        padding-top: 1.5rem;
+        text-align: center;
+    }
 }
 
 /* Responsive */
