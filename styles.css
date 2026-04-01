@@ -503,18 +503,42 @@ body {
     font-size: 1.1rem;
 }
 
+.map-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .service-map {
     width: 25%;
     height: auto;
     display: block;
     transform: rotate(-90deg);
-    margin: 2rem auto;
+    margin: 2rem auto 0;
     cursor: pointer;
     transition: opacity 0.3s ease;
 }
 
 .service-map:hover {
     opacity: 0.8;
+}
+
+.map-hint {
+    margin-top: 1rem;
+    color: var(--primary-blue);
+    font-size: 0.95rem;
+    font-style: italic;
+    text-align: center;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
 }
 
 /* Map Modal */
