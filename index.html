@@ -161,11 +161,17 @@
             <h2>Service Areas</h2>
             <p>We serve across Lincolnshire. See our coverage map:</p>
         </div>
-        <img src="map.png" alt="TGM Service Area Map - Lincolnshire" class="service-map">
+        <img src="map.png" alt="TGM Service Area Map - Lincolnshire" class="service-map" id="mapImage">
         <div class="container">
             <p class="area-note">Not sure if we cover your area? <a href="#contact">Get in touch</a> — we may be able to help.</p>
         </div>
     </section>
+
+    <!-- Map Modal -->
+    <div id="mapModal" class="map-modal">
+        <span class="map-modal-close">&times;</span>
+        <img class="map-modal-content" id="mapModalImg" src="map.png" alt="TGM Service Area Map - Lincolnshire">
+    </div>
 
     <!-- CTA Section -->
     <section class="cta">
@@ -201,6 +207,37 @@
     </section>
 
     <!-- Footer -->
+    <script>
+        // Map modal functionality
+        const mapImage = document.getElementById('mapImage');
+        const mapModal = document.getElementById('mapModal');
+        const mapModalClose = document.querySelector('.map-modal-close');
+
+        // Open modal when clicking map
+        mapImage.addEventListener('click', function() {
+            mapModal.classList.add('show');
+        });
+
+        // Close modal when clicking X
+        mapModalClose.addEventListener('click', function() {
+            mapModal.classList.remove('show');
+        });
+
+        // Close modal when clicking outside the image
+        mapModal.addEventListener('click', function(event) {
+            if (event.target === mapModal) {
+                mapModal.classList.remove('show');
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                mapModal.classList.remove('show');
+            }
+        });
+    </script>
+
     <footer class="footer">
         <div class="container">
             <p>&copy; 2026 TGM Window Cleaning. All rights reserved.</p>
