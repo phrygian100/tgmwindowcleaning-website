@@ -503,23 +503,12 @@ body {
     font-size: 1.1rem;
 }
 
-.map-container {
-    margin-bottom: 2rem;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(91, 155, 213, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--light-bg);
-    padding: 2rem;
-}
-
 .service-map {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    object-fit: contain;
+    display: block;
     transform: rotate(-90deg);
+    margin: 2rem 0;
 }
 
 .area-note {
