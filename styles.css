@@ -507,6 +507,7 @@ body {
     display: block;
     max-height: 600px;
     object-fit: contain;
+    transform: rotate(90deg);
 }
 
 .area-note {
