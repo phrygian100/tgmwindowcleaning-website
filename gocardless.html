@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Up Direct Debit | TGM Window Cleaning</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .redirect-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .spinner {
+            border: 4px solid var(--primary-light);
+            border-top: 4px solid var(--primary-red);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin-bottom: 2rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .redirect-content h1 {
+            color: var(--primary-red);
+            margin-bottom: 1rem;
+        }
+
+        .redirect-content p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .fallback-link {
+            display: inline-block;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">TGM Window Cleaning</div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Redirect Container -->
+    <div class="redirect-container">
+        <div class="redirect-content">
+            <div class="spinner"></div>
+            <h1>Setting Up Your Direct Debit...</h1>
+            <p>We're redirecting you to GoCardless to complete your direct debit setup.</p>
+            <p>If you're not redirected automatically in a few seconds, please click the button below:</p>
+            <a href="https://pay.gocardless.com/BRT0002F3KT0FG9" class="btn btn-primary btn-large fallback-link">Continue to GoCardless</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 TGM Window Cleaning. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Redirect immediately
+        window.location.href = 'https://pay.gocardless.com/BRT0002F3KT0FG9';
+    </script>
+</body>
+</html>
