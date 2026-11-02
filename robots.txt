@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tgmwindowcleaning.co.uk/sitemap.xml
